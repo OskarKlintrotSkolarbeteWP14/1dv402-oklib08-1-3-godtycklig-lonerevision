@@ -123,7 +123,19 @@
   <data name="Continue_Prompt" xml:space="preserve">
     <value>Tryck valfri tangent för att fortsätta eller avsluta med Esc</value>
   </data>
-  <data name="Error_Message" xml:space="preserve">
-    <value>FEL! FEL! FEL!</value>
+  <data name="Error_Higher_Salary" xml:space="preserve">
+    <value>Lönen du har angett är för låg, lönen måste vara minst 10 000:-! Försök igen!</value>
+  </data>
+  <data name="Error_More_Than_Two_Message" xml:space="preserve">
+    <value>Du måste mata in minst två löner för att kunna göra en beräkning!</value>
+  </data>
+  <data name="Error_Not_A_Number_Message" xml:space="preserve">
+    <value>Felaktig inmatning, ange antal löner att mata in: </value>
+  </data>
+  <data name="Number_Of_Salary_Prompt" xml:space="preserve">
+    <value>Ange antal löner att mata in: </value>
+  </data>
+  <data name="Salary_Prompt" xml:space="preserve">
+    <value>Ange lön nummer : </value>
   </data>
 </root>

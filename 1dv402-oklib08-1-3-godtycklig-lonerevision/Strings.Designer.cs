@@ -79,11 +79,47 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FEL! FEL! FEL!.
+        ///   Looks up a localized string similar to Lönen du har angett är för låg, lönen måste vara minst 10 000:-! Försök igen!.
         /// </summary>
-        internal static string Error_Message {
+        internal static string Error_Higher_Salary {
             get {
-                return ResourceManager.GetString("Error_Message", resourceCulture);
+                return ResourceManager.GetString("Error_Higher_Salary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Du måste mata in minst två löner för att kunna göra en beräkning!.
+        /// </summary>
+        internal static string Error_More_Than_Two_Message {
+            get {
+                return ResourceManager.GetString("Error_More_Than_Two_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Felaktig inmatning, ange antal löner att mata in: .
+        /// </summary>
+        internal static string Error_Not_A_Number_Message {
+            get {
+                return ResourceManager.GetString("Error_Not_A_Number_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ange antal löner att mata in: .
+        /// </summary>
+        internal static string Number_Of_Salary_Prompt {
+            get {
+                return ResourceManager.GetString("Number_Of_Salary_Prompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ange lön nummer : .
+        /// </summary>
+        internal static string Salary_Prompt {
+            get {
+                return ResourceManager.GetString("Salary_Prompt", resourceCulture);
             }
         }
     }
