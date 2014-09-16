@@ -136,6 +136,6 @@
     <value>Ange antal löner att mata in: </value>
   </data>
   <data name="Salary_Prompt" xml:space="preserve">
-    <value>Ange lön nummer : </value>
+    <value>Ange lön nummer </value>
   </data>
 </root>

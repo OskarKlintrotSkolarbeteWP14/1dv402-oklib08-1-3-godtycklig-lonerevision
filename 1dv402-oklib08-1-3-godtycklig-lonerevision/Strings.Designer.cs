@@ -115,7 +115,7 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ange lön nummer : .
+        ///   Looks up a localized string similar to Ange lön nummer .
         /// </summary>
         internal static string Salary_Prompt {
             get {
