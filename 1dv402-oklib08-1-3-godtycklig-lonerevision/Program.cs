@@ -25,7 +25,7 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
                 int numberOfSalarys = ReadInt(Strings.Number_Of_Salary_Prompt);
                 for (int i = 0; i < numberOfSalarys; i++) 
                 {
-                    readIntSalary = (Strings.Salary_Prompt.Insert(16, Convert.ToString(i+1) + ": "));
+                    readIntSalary = (Strings.Salary_Prompt.Insert(16, String.Format("{0}: ", Convert.ToString(i+1))));
                     ReadInt(readIntSalary);
                 }
 
