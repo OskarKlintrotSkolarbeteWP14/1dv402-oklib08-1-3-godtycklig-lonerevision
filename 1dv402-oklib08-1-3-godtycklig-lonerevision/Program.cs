@@ -49,7 +49,7 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
                     {
                         try
                         {
-                            ViewMessage(prompt, ConsoleColor.Black);
+                            Console.Write(prompt);
                             readPrompt = int.Parse(Console.ReadLine());
                             if (readPrompt < 2)
                                 throw new ToSmallNumberException(); 
@@ -63,7 +63,8 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
                         {
                             ViewMessage(Strings.Error_Not_A_Number_Message, ConsoleColor.Red);
                         } 
-                    } 
+                    }
+                Console.WriteLine();
 	            }
 
             if (prompt.StartsWith(Strings.Salary_Prompt))
@@ -72,7 +73,7 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
                 {
                     try
                     {
-                        ViewMessage(prompt, ConsoleColor.Black);
+                        Console.Write(prompt);
                         readPrompt = int.Parse(Console.ReadLine());
                         if (readPrompt < 10000)
                             throw new ToSmallNumberException();
@@ -87,6 +88,7 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
                         ViewMessage(Strings.Error_Not_A_Number_Message, ConsoleColor.Red);
                     }
                 }
+                Console.WriteLine();
             }
 
             return readPrompt;
@@ -105,6 +107,7 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
             }
             return ReadSalariesArray;
         }
+        //Displays the messages
         private static void ViewMessage(string message, ConsoleColor backgroundColor = ConsoleColor.Blue, ConsoleColor foregroundColor = ConsoleColor.White)
         {
             Console.BackgroundColor = backgroundColor;
@@ -112,6 +115,7 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
             Console.WriteLine(message);
             Console.ResetColor();
         }
+
         private static void ViewResult(int[] salaries)
         {
 
