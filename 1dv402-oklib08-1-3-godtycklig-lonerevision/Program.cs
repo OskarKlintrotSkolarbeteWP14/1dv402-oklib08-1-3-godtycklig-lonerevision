@@ -115,23 +115,30 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
             Console.WriteLine(message);
             Console.ResetColor();
         }
-
+        //Calculates and displays the results
         private static void ViewResult(int[] salaries)
         {
+            //Calculates the result of the 
+            Console.WriteLine(Strings.Line_Result);
 
         }
     }
     static class MyExtensions
     {
+        //Calculates wage dispersion
         public static int Dispersion(this int[] source)
         {
             return source.Max() - source.Min();
 
         }
+        //Calculates median wage
         private static int Median(this int[] source)
         {
             int place = 0;
             int median = 0;
+
+            Array.Sort(source);
+
             if (source.Length % 2 != 0)
             {
                 place = source.Length / 2;

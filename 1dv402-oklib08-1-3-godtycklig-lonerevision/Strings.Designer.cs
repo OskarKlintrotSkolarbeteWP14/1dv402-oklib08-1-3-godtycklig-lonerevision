@@ -61,6 +61,15 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Medellön:.
+        /// </summary>
+        internal static string Average_Result {
+            get {
+                return ResourceManager.GetString("Average_Result", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Godtycklig lönerevision - nivå C.
         /// </summary>
         internal static string Console_Title {
@@ -75,6 +84,15 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision {
         internal static string Continue_Prompt {
             get {
                 return ResourceManager.GetString("Continue_Prompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lönespridning:.
+        /// </summary>
+        internal static string Dispersion_Result {
+            get {
+                return ResourceManager.GetString("Dispersion_Result", resourceCulture);
             }
         }
         
@@ -102,6 +120,24 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision {
         internal static string Error_Not_A_Number_Message {
             get {
                 return ResourceManager.GetString("Error_Not_A_Number_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -------------------------------.
+        /// </summary>
+        internal static string Line_Result {
+            get {
+                return ResourceManager.GetString("Line_Result", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medianlön:.
+        /// </summary>
+        internal static string Median_Result {
+            get {
+                return ResourceManager.GetString("Median_Result", resourceCulture);
             }
         }
         

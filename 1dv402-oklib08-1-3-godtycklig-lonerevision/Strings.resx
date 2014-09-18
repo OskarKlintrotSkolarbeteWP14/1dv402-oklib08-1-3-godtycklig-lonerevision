@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Average_Result" xml:space="preserve">
+    <value>Medellön:</value>
+  </data>
   <data name="Console_Title" xml:space="preserve">
     <value>Godtycklig lönerevision - nivå C</value>
   </data>
   <data name="Continue_Prompt" xml:space="preserve">
     <value>Tryck valfri tangent för att fortsätta eller avsluta med Esc</value>
+  </data>
+  <data name="Dispersion_Result" xml:space="preserve">
+    <value>Lönespridning:</value>
   </data>
   <data name="Error_Higher_Salary" xml:space="preserve">
     <value>Lönen du har angett är för låg, lönen måste vara minst 10 000:-! Försök igen!</value>
@@ -131,6 +137,12 @@
   </data>
   <data name="Error_Not_A_Number_Message" xml:space="preserve">
     <value>Felaktig inmatning, ange antal löner att mata in: </value>
+  </data>
+  <data name="Line_Result" xml:space="preserve">
+    <value>-------------------------------</value>
+  </data>
+  <data name="Median_Result" xml:space="preserve">
+    <value>Medianlön:</value>
   </data>
   <data name="Number_Of_Salary_Prompt" xml:space="preserve">
     <value>Ange antal löner att mata in: </value>
