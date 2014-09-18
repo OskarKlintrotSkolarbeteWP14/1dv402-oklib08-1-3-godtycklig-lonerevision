@@ -121,15 +121,16 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
 
         }
     }
-    //class MyExtensions
-    //{
-    //    public static int Dispersion(this int[] source)
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-    //    private static int Median(this int[] source)
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-    //}
+    static class MyExtensions
+    {
+        public static int Dispersion(this int[] source)
+        {
+            return source.Max() - source.Min();
+
+        }
+        private static int Median(this int[] source)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
