@@ -77,13 +77,7 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
                     {
                         Console.Write(prompt);
                         readPrompt = int.Parse(Console.ReadLine());
-                        if (readPrompt < 10000)
-                            throw new ToSmallNumberException();
                         break;
-                    }
-                    catch (ToSmallNumberException)
-                    {
-                        ViewMessage(Strings.Error_Higher_Salary, ConsoleColor.Red);
                     }
                     catch (Exception)
                     {
