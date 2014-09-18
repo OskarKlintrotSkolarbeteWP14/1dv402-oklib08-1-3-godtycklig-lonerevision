@@ -130,7 +130,19 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
         }
         private static int Median(this int[] source)
         {
-            throw new NotImplementedException();
+            int place = 0;
+            int median = 0;
+            if (source.Length % 2 != 0)
+            {
+                place = source.Length / 2;
+                median = source[place];
+            }
+            else
+            {
+                place = source.Length / 2;
+                median = (source[place] + source[place--]) / 2;
+            }
+            return median;
         }
     }
 }
