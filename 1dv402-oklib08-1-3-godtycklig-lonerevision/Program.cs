@@ -24,11 +24,6 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
 
                 int[] salariesArray = ReadSalaries(numberOfSalarys);
 
-                foreach (int item in salariesArray)
-                {
-                    Console.WriteLine(item);
-                }
-
                 ViewResult(salariesArray);
                 
                 ViewMessage(Strings.Continue_Prompt);
@@ -114,11 +109,36 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
         //Calculates and displays the results
         private static void ViewResult(int[] salaries)
         {
+            int count = 0;
+            int rows = salaries.Length / 3;
+
+            //If it's not possible to fit the salarys in 3 columns, then add another row
+            if (salaries.Length % 3 != 0)
+            {
+                rows++;
+            }
+
             Console.WriteLine(Strings.Line_Result);
-            Console.WriteLine("{0}{1, 0:C0}", Strings.Median_Result.PadRight(20), MyExtensions.Median(salaries));
-            Console.WriteLine("{0}{1, 0:C0}", Strings.Average_Result.PadRight(20), salaries.Average());
-            Console.WriteLine("{0}{1, 0:C0}", Strings.Dispersion_Result.PadRight(20), MyExtensions.Dispersion(salaries));
+            Console.WriteLine("{0}{1, 10:C0}", Strings.Median_Result.PadRight(18), MyExtensions.Median(salaries));
+            Console.WriteLine("{0}{1, 10:C0}", Strings.Average_Result.PadRight(18), salaries.Average());
+            Console.WriteLine("{0}{1, 10:C0}", Strings.Dispersion_Result.PadRight(18), MyExtensions.Dispersion(salaries));
             Console.WriteLine(Strings.Line_Result);
+
+            if (count < salaries.Length)
+            {
+                for (int row = 0; row < rows; row++)
+                {
+                    for (int col = 0; col < 3; col++)
+                    {
+                        if (count < salaries.Length)
+                        {
+                            Console.Write("{0,8}", salaries[count]);
+                            count++; 
+                        }
+                    }
+                    Console.WriteLine();
+                } 
+            }
         }
     }
     static class MyExtensions
@@ -134,21 +154,22 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
         {
             int place = 0;
             int median = 0;
+            int[] salary = source.ToArray();
 
-            Array.Sort(source);
-            if (2 == source.Length)
+            Array.Sort(salary);
+            if (2 == salary.Length)
             {
-                median = (source[0] + source[1]) / 2;
+                median = (salary[0] + salary[1]) / 2;
             }
-            else if (source.Length % 2 != 0)
+            else if (salary.Length % 2 != 0)
             {
-                place = source.Length / 2;
-                median = source[place];
+                place = salary.Length / 2;
+                median = salary[place];
             }
             else
             {
-                place = source.Length / 2;
-                median = (source[place] + source[--place]) / 2;
+                place = salary.Length / 2;
+                median = (salary[place] + salary[--place]) / 2;
             }
             return median;
         }
