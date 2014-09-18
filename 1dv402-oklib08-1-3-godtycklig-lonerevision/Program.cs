@@ -16,19 +16,19 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
         {
             Console.Title = Strings.Console_Title;
 
-            string readIntSalary;
-
             do
             {
                 Console.Clear();
 
                 int numberOfSalarys = ReadInt(Strings.Number_Of_Salary_Prompt);
-                for (int i = 0; i < numberOfSalarys; i++) 
-                {
-                    readIntSalary = (Strings.Salary_Prompt.Insert(16, String.Format("{0}: ", Convert.ToString(i+1))));
-                    ReadInt(readIntSalary);
-                }
 
+                int[] salariesArray = ReadSalaries(numberOfSalarys);
+
+                foreach (int item in salariesArray)
+                {
+                    Console.WriteLine(item);
+                }
+                
                 ViewMessage(Strings.Continue_Prompt);
             } while (IsContinuing());
         }
@@ -39,6 +39,7 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
             esc = Console.ReadKey();
             return esc.Key != ConsoleKey.Escape;
         }
+        //Reads the number of salaries and the salaries
         private static int ReadInt(string prompt)
         {
             int readPrompt = 0;
@@ -90,10 +91,20 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
 
             return readPrompt;
         }
-        //private static int[] ReadSalaries(int count)
-        //{
+        //Creates an array of the salaries
+        private static int[] ReadSalaries(int count)
+        {
+            string readIntSalary;
 
-        //}
+            int[] ReadSalariesArray = new int[count];
+
+            for (int i = 0; i < count; i++)
+            {
+                readIntSalary = (Strings.Salary_Prompt.Insert(Strings.Salary_Prompt.Length, String.Format("{0}: ", Convert.ToString(i + 1))));
+                ReadSalariesArray[i] = ReadInt(readIntSalary);
+            }
+            return ReadSalariesArray;
+        }
         private static void ViewMessage(string message, ConsoleColor backgroundColor = ConsoleColor.Blue, ConsoleColor foregroundColor = ConsoleColor.White)
         {
             Console.BackgroundColor = backgroundColor;
@@ -106,15 +117,15 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
 
         }
     }
-    class MyExtensions
-    {
-        //public static int Dispersion(this int[] source)
-        //{
-
-        //}
-        //private static int Median(this int[] source)
-        //{
-
-        //}
-    }
+    //class MyExtensions
+    //{
+    //    public static int Dispersion(this int[] source)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+    //    private static int Median(this int[] source)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+    //}
 }
