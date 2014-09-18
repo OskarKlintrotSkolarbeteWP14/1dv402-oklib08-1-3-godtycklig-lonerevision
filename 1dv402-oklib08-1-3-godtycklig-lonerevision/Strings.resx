@@ -139,7 +139,7 @@
     <value>Felaktig inmatning, ange antal löner att mata in: </value>
   </data>
   <data name="Line_Result" xml:space="preserve">
-    <value>-------------------------------</value>
+    <value>-----------------------------</value>
   </data>
   <data name="Median_Result" xml:space="preserve">
     <value>Medianlön:</value>

@@ -28,6 +28,8 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
                 {
                     Console.WriteLine(item);
                 }
+
+                ViewResult(salariesArray);
                 
                 ViewMessage(Strings.Continue_Prompt);
             } while (IsContinuing());
@@ -118,9 +120,11 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
         //Calculates and displays the results
         private static void ViewResult(int[] salaries)
         {
-            //Calculates the result of the 
             Console.WriteLine(Strings.Line_Result);
-
+            Console.WriteLine("{0}{1, 0:C0}", Strings.Median_Result.PadRight(20), MyExtensions.Median(salaries));
+            Console.WriteLine("{0}{1, 0:C0}", Strings.Average_Result.PadRight(20), salaries.Average());
+            Console.WriteLine("{0}{1, 0:C0}", Strings.Dispersion_Result.PadRight(20), MyExtensions.Dispersion(salaries));
+            Console.WriteLine(Strings.Line_Result);
         }
     }
     static class MyExtensions
@@ -132,14 +136,17 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
 
         }
         //Calculates median wage
-        private static int Median(this int[] source)
+        public static int Median(int[] source)
         {
             int place = 0;
             int median = 0;
 
             Array.Sort(source);
-
-            if (source.Length % 2 != 0)
+            if (2 == source.Length)
+            {
+                median = (source[0] + source[1]) / 2;
+            }
+            else if (source.Length % 2 != 0)
             {
                 place = source.Length / 2;
                 median = source[place];
@@ -147,7 +154,7 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision
             else
             {
                 place = source.Length / 2;
-                median = (source[place] + source[place--]) / 2;
+                median = (source[place] + source[--place]) / 2;
             }
             return median;
         }

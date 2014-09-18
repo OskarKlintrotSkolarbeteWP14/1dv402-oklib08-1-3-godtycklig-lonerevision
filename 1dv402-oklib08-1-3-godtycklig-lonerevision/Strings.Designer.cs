@@ -124,7 +124,7 @@ namespace _1dv402_oklib08_1_3_godtycklig_lonerevision {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -------------------------------.
+        ///   Looks up a localized string similar to -----------------------------.
         /// </summary>
         internal static string Line_Result {
             get {
